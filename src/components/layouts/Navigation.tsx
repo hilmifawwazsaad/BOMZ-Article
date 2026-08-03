@@ -29,7 +29,7 @@ export default function Navigation() {
     );
 
   return (
-    <header className="flex items-center justify-between px-8 py-4 sticky top-0 bg-(--bg) z-10 max-lg:px-5 max-lg:py-3">
+    <header className="flex items-center justify-between px-8 py-4 sticky top-0 bg-(--bg) z-10 max-lg:px-4 max-lg:py-4">
       <Link to="/" className="no-underline flex items-baseline gap-2">
         <span className="text-xl font-bold text-(--text-h) tracking-tight">BOMZ</span>
         <span className="text-base font-normal text-(--text)">Article</span>

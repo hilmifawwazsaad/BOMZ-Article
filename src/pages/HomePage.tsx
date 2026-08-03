@@ -34,10 +34,10 @@ export default function HomePage() {
     );
   });
 
-  // Round-robin distribution into 3 panels (left, center, right)
-  const leftArticles = filtered.filter((_, i) => i % 3 === 0);
-  const centerArticles = filtered.filter((_, i) => i % 3 === 1);
-  const rightArticles = filtered.filter((_, i) => i % 3 === 2);
+  // Sequential block-of-2 distribution: fills panels L→R in pairs to preserve reading order
+  const leftArticles = filtered.filter((_, i) => Math.floor(i / 2) % 3 === 0);
+  const centerArticles = filtered.filter((_, i) => Math.floor(i / 2) % 3 === 1);
+  const rightArticles = filtered.filter((_, i) => Math.floor(i / 2) % 3 === 2);
 
   const searchInput = (
     <div className="relative">
@@ -47,7 +47,7 @@ export default function HomePage() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Cari artikel, topik, atau kategori..."
-        className="w-full pl-11 pr-4 py-3 border border-(--border) rounded-sm bg-(--bg) text-(--text-h) placeholder:text-(--text) focus:outline-none focus:border-(--accent) transition-colors"
+        className="w-full pl-12 pr-4 py-4 border border-(--border) rounded-sm bg-(--bg) text-(--text-h) placeholder:text-(--text) focus:outline-none focus:border-(--accent) transition-colors"
       />
     </div>
   );

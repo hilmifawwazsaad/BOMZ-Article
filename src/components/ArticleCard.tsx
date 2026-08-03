@@ -20,7 +20,8 @@ export default function ArticleCard({ article }: Props) {
       to={`/article/${article.slug}`}
       className="flex flex-col no-underline text-inherit border border-(--border) rounded-sm overflow-hidden transition-all duration-200 hover:shadow-(--shadow) hover:border-(--accent-border)"
     >
-      <div className="flex flex-col gap-3 p-5">
+      <div className="flex flex-col gap-4 p-4">
+        <span className="text-xs text-(--text)">{formatDate(article.date)}</span>
         <h2 className="text-lg tracking-[-0.2px] m-0 text-(--text-h) leading-[140%]">
           {article.title}
         </h2>

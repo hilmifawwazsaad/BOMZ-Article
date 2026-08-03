@@ -32,7 +32,7 @@ export default function ArticlePage() {
     return (
       <>
         <Navigation />
-        <main className="px-10 pb-20 max-w-180 mx-auto w-full box-border max-lg:px-5">
+        <main className="px-10 pb-20 max-w-180 mx-auto w-full box-border max-lg:px-4">
           <div className="text-center py-20 flex flex-col items-center gap-6">
             <h1>Artikel tidak ditemukan</h1>
             <Link to="/" className="text-sm text-(--text) hover:text-(--text-h) no-underline">
@@ -52,8 +52,8 @@ export default function ArticlePage() {
   return (
     <>
       <Navigation />
-      <main className="px-10 pb-20 max-w-180 mx-auto w-full box-border max-lg:px-5 max-lg:pb-16">
-        <nav className="flex items-center gap-1 text-xs text-(--text) mt-8 mb-8">
+      <main className="px-10 pb-20 max-w-180 mx-auto w-full box-border max-lg:px-4 max-lg:pb-16">
+        <nav className="flex items-center gap-2 text-xs text-(--text) mt-8 mb-8">
           <Link to="/" className="hover:text-(--text-h) no-underline text-(--text)">Beranda</Link>
           <span>/</span>
           <span className="truncate max-w-80 font-medium text-(--text-h)">{article.title}</span>
